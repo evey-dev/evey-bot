@@ -29,12 +29,12 @@ module.exports = {
         var hash = stringToHash(args[0]) + stringToHash(args[1])
         
         var percent = hash.toString()
-        percent = percent.substr(-3)
-        if (parseInt(percent) > 100 || percent.substr(0,1) == "0") {
-            percent = percent.substr(-2);
+        percent = percent.substring(-3)
+        if (parseInt(percent) > 100 || percent.substring(0,1) == "0") {
+            percent = percent.substring(-2);
         }
-        if (percent.substr(0,1) == "0") {
-            percent = percent.substr(-1);
+        if (percent.substring(0,1) == "0") {
+            percent = percent.substring(-1);
         }
 
         const shipembed = new Discord.MessageEmbed()
